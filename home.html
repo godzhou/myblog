@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <title>HOME</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
                 <li><a href="#" class="active">首页</a> </li>
                 <li><a href="#">链接2</a> </li>
                 <li><a href="#">链接3</a> </li>
-                <li><a href="#">链接4</a> </li>
+                <li id="sidebar_trigger"><a href="#">侧栏链接</a> </li>
             </ul>
         </nav>
         <div id="banner">
@@ -25,6 +26,7 @@
                     dolor eligendi quae ullam.</p>
                 <button>了解我</button>
                 <div class="more">MORE</div>
+                    <i class="icon-chevron-down"></i>
             </div>
         </div>
 
@@ -38,10 +40,16 @@
                     <p class="sub-heading">Lorem ipsum dolor sit amet Dignissimos
                         dolor eligendi quae ullam.</p>
                 </div>
-                <div class="icon-group">
-                    <span class="icon">item1</span>
-                    <span class="icon">item2</span>
-                    <span class="icon">item3</span>
+                <div class="icon--group">
+                    <span class="icon">
+                            <i class="icon-cloud-download icon-4x"></i>
+                    </span>
+                    <span class="icon">
+                            <i class="icon-cloud-upload icon-4x"></i>
+                    </span>
+                    <span class="icon">
+                            <i class="icon-envelope icon-4x"></i>
+                    </span>
                 </div>
             </div>
         </section>
@@ -136,6 +144,19 @@
             &copy Fake Armour - 2017
         </div>
     </footer>
+    <div class="mask"></div>
+    <div id="side-bar">
+        <ul>
+            <li><a href="#">item1</a></li>
+            <li><a href="#">item2</a></li>
+            <li><a href="#">item3</a></li>
+            <li><a href="#">item4</a></li>
+            <li><a href="#">item5</a></li>
+        </ul>
+    </div>
+    <button id="back-to-top">返回顶部</button>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
 </div>
 
 

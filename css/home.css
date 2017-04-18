@@ -105,17 +105,16 @@ button{
     background: #078494;
     width: 60%;
 }
-.green-section .icon-group .icon{
+.green-section .icon--group .icon{
     display: inline-block;
     width: 80px;
     height: 80px;
-    background: #078898;
-    transform: rotate(45deg);
+    background: #089db0;
     margin: 20px;
+    transform: rotate(45deg);
+    border: 1px solid #087f90;
 }
-.icon-group{
-    margin-top: 50px;
-}
+
 .wrapper{
     max-width: 1080px;
     margin: 0 auto;
@@ -232,4 +231,53 @@ ul.share-group{
     background-repeat: no-repeat;
     background-size:cover ;
     background-position: center center;
+    overflow: hidden;
+}
+.icon{
+    vertical-align: middle;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 17px;
+    left: 3px;
+}
+#side-bar{
+    position: fixed;
+    top:0;
+    right: -300px;
+    bottom: 0;
+    width: 300px;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+
+}
+#side-bar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#side-bar ul a{
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+}
+#side-bar ul a:hover{
+    background: #444;
+}
+.mask{
+    display: none;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+}
+#back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 1px solid #999;
 }
