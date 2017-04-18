@@ -34,6 +34,6 @@
             backButton.fadeOut();
     })
 
-    $(window).trigger('scroll' );
+
 })
 
