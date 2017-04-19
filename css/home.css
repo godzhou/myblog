@@ -8,7 +8,7 @@ body{
 }
 #header{
     background: rgba(0,0,0,0.4);
-    height: 700px;
+    height: 750px;
 }
 nav{
     height: 50px;
@@ -41,6 +41,10 @@ nav ul li,nav .logo{
     color: #fff;
     text-decoration: none;
 }
+.art-pre a{
+    color: #ffffff;
+    text-decoration: none;
+}
 nav ul li a{
     line-height: 50px;
     text-decoration: none;
@@ -59,6 +63,16 @@ nav ul li a{
 #banner .inner h1{
     margin: 0;
 }
+.article #header{
+    height: 550px;
+}
+.article #banner .inner{
+    top: 100px;
+}
+.article h1{
+    border:none;
+}
+
 .active{
     border-bottom: 4px solid #fff;
 }
@@ -231,7 +245,7 @@ ul.share-group{
     padding-bottom: 20px;
 }
 .main-wrapper{
-    background: #444 url(../img/banner.jpg);
+    background: #444 url(../img/pic_04.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size:cover ;
@@ -286,4 +300,41 @@ ul.share-group{
     bottom: 30px;
     right: 40px;
     border: 1px solid #999;
+}
+.article .content{
+    background: #eee;
+}
+.content_wrapper{
+    width: 1080px;
+    margin: 0 auto;
+}
+.article_info{
+    font-size: 14px;
+    color: #999;
+    padding: 15px 0;
+}
+article{
+    font-size: 20px;
+    padding: 10px 0;
+    line-height: 2;
+    color: #ddd;
+}
+.article-wrapper{
+    background: #444 url(../img/yanhua.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center center;
+    overflow: hidden;
+}
+.title{
+    text-align: center;
+    font-size: 35px;
+    color: #eee;
+}
+.suojin{
+    text-indent: 2em;
+}
+.yinyong{
+    text-align: center;
 }
