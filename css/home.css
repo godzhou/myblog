@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: 宋体;
 }
 .clearfix:after{
     content: '';
@@ -13,12 +14,8 @@ body{
 nav{
     height: 50px;
     letter-spacing: 2px;
-    position: fixed;
-    top:0;
-    right:0;
-    left:0;
     background: rgba(0,0,0,0.2);
-    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.6);
 }
 nav ul{
     list-style: none;
@@ -102,6 +99,9 @@ button{
 }
 #banner button{
     padding: 15px 40px;
+    background: #088fa2;
+    font-size: 18px;
+    font-family: 宋体;
 }
 #banner .inner .more{
     margin-top: 200px;
