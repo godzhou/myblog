@@ -261,7 +261,7 @@ ul.share-group{
 }
 #side-bar{
     position: fixed;
-    top:0;
+    top: 50px;
     right: -300px;
     bottom: 0;
     width: 300px;
@@ -277,7 +277,7 @@ ul.share-group{
 }
 #side-bar ul a{
     color: #fff;
-    padding: 10px 30px;
+    padding: 10px 50px;
     display: inline-block;
     text-decoration: none;
     width: 100%;

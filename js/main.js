@@ -25,13 +25,20 @@
     }
 
     function butme() {
-        var mess = confirm("你知道我是谁吗？");
+
+        var mess = confirm("你觉得我帅吗？");
+
         if (mess == true){
             alert("来的都是客");
+            butt.innerHTML = 'HELLO';
         }
-        else
+        else {
             //document.write("get away")
-            window.close();
+            alert('再见,我要关窗口了');
+            timerid = setTimeout(function(){
+                window.close();
+            },1000);
+        }
     }
 
 
