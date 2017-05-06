@@ -8,6 +8,7 @@
         mask = $('.mask'),
         backButton = $('#back-to-top'),
         sidebar_trigger = $('#sidebar_trigger');
+        butt = $('#me');
 
     function showSideBar() {
         mask.fadeIn();
@@ -23,9 +24,21 @@
         },600)
     }
 
+    function butme() {
+        var mess = confirm("你知道我是谁吗？");
+        if (mess == true){
+            alert("来的都是客");
+        }
+        else
+            //document.write("get away")
+            window.close();
+    }
+
+
     sidebar_trigger.on('click',showSideBar);
     mask.on('click',hideSideBar);
-    backButton.on('click',backToTop)
+    backButton.on('click',backToTop);
+    butt.on('click',butme);
 
     $(window).on('scroll',function (){
         if ($(window).scrollTop() > $(window).height())
