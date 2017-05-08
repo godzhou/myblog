@@ -10,6 +10,21 @@
         sidebar_trigger = $('#sidebar_trigger');
         butt = $('#me');
 
+    var oBtn = $('#btnLogin');
+        oMask = $('.mask2');
+        oLogin = $('#login');
+        oClose = $('#close');
+
+
+    function login() {
+        oMask.fadeIn();
+        oLogin.fadeIn();
+    }
+    function reLogin() {
+        oMask.fadeOut();
+        oLogin.fadeOut();
+    }
+
     function showSideBar() {
         mask.fadeIn();
         sidebar.animate({'right':0});
@@ -46,6 +61,8 @@
     mask.on('click',hideSideBar);
     backButton.on('click',backToTop);
     butt.on('click',butme);
+    oBtn.on('click',login);
+    oClose.on('click',reLogin);
 
     $(window).on('scroll',function (){
         if ($(window).scrollTop() > $(window).height())
@@ -55,5 +72,5 @@
     })
 
 
-})
+});
 

@@ -32,7 +32,7 @@ nav ul li,nav .logo{
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 .logo a{
     color: #fff;
@@ -292,7 +292,18 @@ ul.share-group{
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.25);
+
+}
+.mask2{
+    display: none;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+
 }
 #back-to-top{
     display: none;
@@ -337,4 +348,30 @@ article{
 }
 .yinyong{
     text-align: center;
+}
+#login{
+    position: fixed;
+    left:30%;
+    top:30%;
+    z-index: 1;
+    display: none;
+}
+.loginCon{
+    width:670px;
+    height: 380px;
+    background: url("../img/loginBg.png");
+
+}
+#close{
+    width: 30px;
+    height: 30px;
+    content: url("../img/close.png");
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+
+}
+#close:hover{
+    background: rgba(255,255,255,0.2);
 }
