@@ -359,7 +359,7 @@ article{
 .loginCon{
     width:670px;
     height: 380px;
-    background: url("../img/loginBg.png");
+    background: #ddd;
 
 }
 #close{
@@ -374,4 +374,75 @@ article{
 }
 #close:hover{
     background: rgba(255,255,255,0.2);
+}
+
+.logintop{
+    height:60px;
+    width: 100%;
+    position: absolute;
+    top:0;
+    background: #be302f;
+}
+.logfont{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "微软雅黑 Light";
+    letter-spacing: 5px;
+    margin: 17px;
+    padding-right: 5px;
+}
+.loginright{
+
+    width:56%;
+    height: 250px;
+    position: absolute;
+    top: 100px;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+.loginleft{
+    width: 44%;
+    height: 250px;
+    float: right;
+    position: relative;
+    top: 130px;
+}
+.input_c{
+    width: 270px;
+    height: 35px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    padding-left: 5px;
+    position: relative;
+
+    background: #eee;
+    color: #bbb;
+    font-size: 18px;
+    border: 1px solid #aaa;
+}
+.btu{
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    background: #bbb;
+    color: #000;
+    margin: 10px 15px;
+}
+.btut{
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+    align-self: center;
+    margin: 8px 50px;
+}
+.log{
+    margin-left: 50px;
+}
+.loglog{
+    background: #21b259;
+    color: #ffffff;
+}
+.loglefont{
+    text-align: center;
 }
