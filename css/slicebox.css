@@ -43,9 +43,9 @@
 	right: 10px;
 	z-index: 10;
 	position: absolute;
-	background: #d1c5b3;
-	background: rgba(190,176,155, 0.4);
-	border-left: 4px solid rgba(255,255,255,0.7);
+	background: #089db0;
+	background: rgba(147, 207, 202, 0.4);
+	border-left: 8px solid rgba(8, 198, 219, 0.7);
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);	
 	opacity: 0;
@@ -67,7 +67,7 @@
 .sb-slider li.sb-current .sb-description:hover {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
 	filter: alpha(opacity=99);	
-	background: rgba(190,176,155, 0.7);
+	background: rgba(55, 165, 207, 0.5);
 }
 
 .sb-perspective {
