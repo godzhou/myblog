@@ -2,7 +2,41 @@
  * Created by pengxiang on 04/07 0007.
  */
 
+
+
+function drag() {
+    oLogin.onmousedown = fnDown();
+}
+
+function fnDown(event) {
+
+    event = event || window.event;
+    //document.title = event.clientX+','+event.clientY;
+
+    var oDrag = $('#login');
+    disX = event.clientX - oDrag.offsetLeft;
+    disY = event.clientY - oDrag.offsetTop;
+
+    document.onmousemove = function (event) {
+        event = event || window.event;
+        fnMove(event,disX,disY);
+    }
+}
+function fnMove(ee,posX,posY) {
+    var oDrag = $('#login');
+        l = e.clientX-posX;
+        t = e.clientY-posY;
+    oDrag.style.left = l + 'px';
+    oDrag.style.top = t + 'px';
+}
+
+window.onload = drag;
+
+
 ;$(function () {
+
+    //input元素的选择器使用
+
 
     var sidebar = $('#side-bar'),//xuanze
         mask = $('.mask'),
@@ -14,6 +48,7 @@
         oMask = $('.mask2');
         oLogin = $('#login');
         oClose = $('#close');
+
 
 
     function login() {
@@ -71,6 +106,7 @@
             backButton.fadeOut();
     })
 
+    window.onload = drag();
 
 });
 

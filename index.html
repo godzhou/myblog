@@ -5,7 +5,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" >
+
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" >
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="icon" href="img/icon.ico" type="image/x-ico">
     <title>Home</title>
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
 </head>
 <body>
 <div class="main-wrapper">
@@ -27,10 +33,58 @@
                     I cheated the world,</br>
                     still can not deceive myself.</p>
                 <button id="me" >了解我</button>
-                <div class="more">MORE</div>
+                <div class="s-more">MORE</div>
                     <i class="icon-chevron-down"></i>
             </div>
+            <div id="slider" >
+                <ul id="sb-slider" class="sb-slider">
+                    <li>
+                        <a href="http://blog.csdn.net/armour__r" target="_blank"><img src="img/1.jpg" alt="#"></a>
+                        <div class="sb-description">
+                            <h3>第一张</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="img/2.jpg" alt="img/2.jpg"></a>
+                        <div class="sb-description">
+                            <h3>第二张</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="img/3.jpg" alt="img/3.jpg"></a>
+                        <div class="sb-description">
+                            <h3>第三张</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="img/4.jpg" alt="img/4.jpg"></a>
+                        <div class="sb-description">
+                            <h3>第四张</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="img/5.jpg" alt="img/5.jpg"></a>
+                        <div class="sb-description">
+                            <h3>第五张</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="nav-arrows" class="nav-arrows">
+                <a href="#">Next</a>
+                <a href="#">Previous</a>
+            </div>
+
+            <div id="nav-dots" class="nav-dots">
+                <span class="nat-dot-current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+
 
     </div>
     <div id="main-content">
@@ -161,14 +215,14 @@
                 <form>
                 <input class="input_c" name="log_id" type="text" value="请输入登陆邮箱" />
                 <input class="input_c" name="log_pw" type="password" value="" />
-                <button class="btu log" >注册账号</button>
-                <button class="btu loglog" type="submit">登录</button>
+                <button class="btu log" onclick="">注册账号</button>
+                <button class="btu loglog"  onclick="">登录</button>
                 </form>
             </div>
             <div class="loginleft">
                 <div class="loglefont">一键授权，快速登录</div>
-                <button class="btut" style="background: #259cce">QQ账号直接登录</button>
-                <button class="btut"style="background: #be302f">新浪微账号登录</button>
+                <button class="btut" style="background: #259cce" onclick="">QQ账号直接登录</button>
+                <button class="btut"style="background: #be302f" onclick="">新浪微账号登录</button>
             </div>
 
         </div>
@@ -185,6 +239,87 @@
     <button id="back-to-top">返回顶部</button>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            var Page = (function() {
+
+                var $navArrows = $( '#nav-arrows' ).hide(),
+                    $navDots = $( '#nav-dots' ).hide(),
+                    $nav = $navDots.children( 'span' ),
+                    $shadow = $( '#shadow' ).hide(),
+                    slicebox = $( '#sb-slider' ).slicebox( {
+                        onReady : function() {
+
+                            $navArrows.show();
+                            $navDots.show();
+                            $shadow.show();
+
+                        },
+                        onBeforeChange : function( pos ) {
+
+                            $nav.removeClass( 'nav-dot-current' );
+                            $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+                        }
+                    } ),
+
+                    init = function() {
+
+                        initEvents();
+
+                    },
+                    initEvents = function() {
+
+                        // add navigation events
+                        $navArrows.children( ':first' ).on( 'click', function() {
+
+                            slicebox.next();
+                            return false;
+
+                        } );
+
+                        $navArrows.children( ':last' ).on( 'click', function() {
+
+                            slicebox.previous();
+                            return false;
+
+                        } );
+
+                        $nav.each( function( i ) {
+
+                            $( this ).on( 'click', function( event ) {
+
+                                var $dot = $( this );
+
+                                if( !slicebox.isActive() ) {
+
+                                    $nav.removeClass( 'nav-dot-current' );
+                                    $dot.addClass( 'nav-dot-current' );
+
+                                }
+
+                                slicebox.jump( i + 1 );
+                                return false;
+
+                            } );
+
+                        } );
+
+                    };
+
+                return { init : init };
+
+            })();
+
+            Page.init();
+
+        });
+    </script>
+
+
 </div>
 
 
