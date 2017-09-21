@@ -1,8 +1,11 @@
 /* Slicebox Style */
 #slider{
 	position: relative;
-	width: 700px;
+	width: 50%;
 	height: 0;
+	left: 55%;
+	top: 80px;
+
 
 }
 
@@ -12,11 +15,10 @@
 
 }
 .sb-slider {
-	margin: 10px 0;
+	margin: 10px 10px;
 	position: relative;
 	overflow: hidden;
-	width: 700px;
-
+	width: 65%;
 	list-style-type: none;
 	padding: 0;
 }

@@ -28,12 +28,11 @@
 	height: 42px;
 	background: rgba(0,0,0,0.3) url(../img/nav.png) no-repeat top left;
 	position: absolute;
-	top: 45%;
-	left: 880px;
-	margin-right: 175px;
+	left: -10%;
+	margin-right: 20%;
 	text-indent: -9000px;
 	cursor: pointer;
-	margin-top: -21px;
+	margin-top: -25%;
 	opacity: 0.9;
 	border-radius: 50%;
 	box-shadow: 0 1px 1px rgba(255,255,255,0.8);
@@ -49,14 +48,20 @@
 	opacity: 1;
 }
 
-.nav-dots {
+/*.nav-dots {*/
 
-	position: absolute;
-	bottom: 200px;
+	/*position: absolute;*/
+	/*bottom: 200px;*/
+	/*height: 30px;*/
+	/*width: 200px;*/
+	/*left: 1240px;*/
+	/*display: none;*/
+/*}*/
+.nav-dots {
+	position: relative;
 	height: 30px;
 	width: 200px;
-	left: 1240px;
-	display: none;
+	left: 25%;
 }
 
 .nav-dots span {

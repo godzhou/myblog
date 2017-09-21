@@ -2,20 +2,7 @@
  * Created by pengxiang on 04/07 0007.
  */
 
-function setBodyWidth(){
-    var barWidthHelper = document.createElement('div');
-    barWidthHelper.style.cssText = "overflow:scroll;width:100px;height:100px;";
-    document.body.appendChild(barWidthHelper);
-    var barWidth = barWidthHelper.offsetWidth - barWidthHelper.clientWidth;
-    document.body.removeChild(barWidthHelper);
-    var bodyWidth = window.screen.availWidth-barWidth;
-    return bodyWidth;
-}
 
-$(document).ready(function () {
-    var bodyWidth = setBodyWidth()+'px';
-    $(body).css('width',bodyWidth);
-})
 
 function drag() {
     oLogin.onmousedown = fnDown();
@@ -122,4 +109,21 @@ window.onload = drag;
     window.onload = drag();
 
 });
+
+$(document).ready(function () {
+    $('.fo_ur').focus(
+        function () {
+            if (this.value == "请输入登陆邮箱"){
+                this.value = "";
+            }
+        }
+    )
+    $('.fo_ur').blur(
+        function () {
+            if (this.value == ""){
+                this.value = "请输入登陆邮箱";
+            }
+        }
+    )
+})
 
